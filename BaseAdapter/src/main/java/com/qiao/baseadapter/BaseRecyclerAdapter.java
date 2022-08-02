@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * Created by Administrator on 2018/7/31 0031.
  */
 
-public abstract class UniversalRecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> implements View.OnClickListener {
+public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> implements View.OnClickListener {
 
     public Context mContext;
     public ObservableArrayList<T> mDatas;
@@ -26,19 +26,19 @@ public abstract class UniversalRecyclerAdapter<T> extends RecyclerView.Adapter<B
     private OnItemClickListener mItemClickListener;
     private onLongItemClickListener mLongItemClickListener;
 
-    public UniversalRecyclerAdapter(Context mContext, ObservableArrayList<T> mDatas, int mLayoutId) {
+    public BaseRecyclerAdapter(Context mContext, ObservableArrayList<T> mDatas, int mLayoutId) {
         this.mContext = mContext;
         this.mDatas = mDatas;
         this.mLayoutId = mLayoutId;
     }
 
 
-    public  UniversalRecyclerAdapter(Context mContext, ObservableArrayList<T> mDatas) {
+    public BaseRecyclerAdapter(Context mContext, ObservableArrayList<T> mDatas) {
         this.mContext = mContext;
         this.mDatas = mDatas;
     }
 
-    public UniversalRecyclerAdapter(Context context, ObservableArrayList<T> mDatas, int mLayoutId, int type){
+    public BaseRecyclerAdapter(Context context, ObservableArrayList<T> mDatas, int mLayoutId, int type){
         this.mContext = context;
         this.mDatas = mDatas;
         this.mLayoutId = mLayoutId;
