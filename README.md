@@ -11,7 +11,6 @@ RecyclerView简单的适配器，适用于普通列表，目前不具备分组�
 示例：
 
 public class WarehousAdapter extends BaseRecyclerAdapter<MaterialsModel> {
-
     public WarehousAdapter(Context mContext, ObservableArrayList<MaterialsModel> mDatas) {
         super(mContext, mDatas, R.layout.item_material_layout);
     }
@@ -35,7 +34,7 @@ public class MaterialsModel {
         this.title = title;
     }
 }
-item监听时间：
+item监听：
 
 warehousAdapter.setOnItemClickListener(new BaseRecyclerAdapter.OnItemClickListener() {
             @Override
@@ -43,7 +42,7 @@ warehousAdapter.setOnItemClickListener(new BaseRecyclerAdapter.OnItemClickListen
                 
             }
         });
-item长按监听时间：
+item长按监听：
 
 warehousAdapter.setonLongItemClickListener(new BaseRecyclerAdapter.onLongItemClickListener() {
            @Override
