@@ -9,6 +9,7 @@ RecyclerView简单的适配器，适用于普通列表，目前不具备分组�
 3.新建adpter类，继承BaseRecyclerAdapter<此处为item实体类>,重写Cover方法；并添加类构造方法。
 4.此库有使用Binding绑定视图。
 示例：
+
 public class WarehousAdapter extends BaseRecyclerAdapter<MaterialsModel> {
 
     public WarehousAdapter(Context mContext, ObservableArrayList<MaterialsModel> mDatas) {
@@ -22,6 +23,7 @@ public class WarehousAdapter extends BaseRecyclerAdapter<MaterialsModel> {
 }
 
 MaterialsModel实体类：
+
 public class MaterialsModel {
     private String title;
 
@@ -34,6 +36,7 @@ public class MaterialsModel {
     }
 }
 item监听时间：
+
 warehousAdapter.setOnItemClickListener(new BaseRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -41,6 +44,7 @@ warehousAdapter.setOnItemClickListener(new BaseRecyclerAdapter.OnItemClickListen
             }
         });
 item长按监听时间：
+
 warehousAdapter.setonLongItemClickListener(new BaseRecyclerAdapter.onLongItemClickListener() {
            @Override
            public void onLongItemClick(View view, int postion) {
